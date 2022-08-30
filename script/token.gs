@@ -1,3 +1,6 @@
+/**
+ * トークンの生成と割り当て
+ * */
 function createToken() {
   let sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
   for (let i = 2; i <= sheet.getMaxRows(); i++) {
@@ -29,11 +32,17 @@ function createToken() {
     }
 }
 
+/**
+ * メールアドレスのバリデーション
+ * */
 function isMailAdress(text) {
   const REGEX = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
   return REGEX.test(text)
 }
 
+/**
+ * トークン生成
+ * */
 function genelateToken(sheetId) {
   const LENGTH = 8 //生成したい文字列の長さ
   const SOURCE = "abcdefghijklmnopqrstuvwxyz123456789"

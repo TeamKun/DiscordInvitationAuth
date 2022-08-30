@@ -1,3 +1,6 @@
+/**
+ * メール送信
+ * */
 function sendMail() {
 
   // 招待URL入力
@@ -83,11 +86,17 @@ function sendMail() {
   ui.ButtonSet.OK)
 }
 
+/**
+ * ディスコードの招待URLのバリデーション
+ * */
 function isDiscordInvitationURL(text) {
   const REGEX = /^https:\/\/discord.gg\//
   return REGEX.test(text)
 }
 
+/**
+ * メール送信時のバリデーション
+ * */
 function mailSendValitdation(values) {
   for (let i = 0; i < 3; i++) {
     if (!values[i]) {

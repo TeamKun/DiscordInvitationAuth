@@ -1,6 +1,6 @@
 /**
  * シート作成
-*/
+ * */
 function createSheet() {
   let ui = SpreadsheetApp.getUi()
   let dialogTitle = '新しいユーザーシートを作成する'
@@ -20,6 +20,8 @@ function createSheet() {
   newSheet.getRange('B1').setValue('mail_adress').setBackgroundRGB(255,255,153)
   newSheet.getRange('C1').setValue('token').setBackgroundRGB(255,255,153)
   newSheet.getRange('D1').setValue('status').setBackgroundRGB(255,255,153)
+  newSheet.getRange('E1').setValue('user_name').setBackgroundRGB(255,255,153)
+  newSheet.getRange('F1').setValue('user_id').setBackgroundRGB(255,255,153)
 
   SpreadsheetApp.getActiveSpreadsheet().getSheet
 }
